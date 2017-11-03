@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <script   
+        src="http://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous">
+        </script>    
+    <script>
+        $(document).ready(function(){
+
+        });
+
+        $(function(){
+            $("h2").click(function(){
+                console.log("h2 clicked");
+            });
+        });
+
+        var model = {
+            title:{
+                 over:"test overed",
+                 out:"test"
+            },
+            count:0
+        };
+
+        $(".testover").mouseover(function(e){
+            var children = $(e.target).children;
+            $(children[0]).html(model.title.over);
+            $(children[1]).html(model.count++);
+
+        });
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+    </script>
+    </head>
+
+    <body>
+        <section class="test">
+            <h2></h2>
+            <div></div>
+        </section>
+    </body>
+</html>
+ 
