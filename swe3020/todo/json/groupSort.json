@@ -1,0 +1,13 @@
+{
+    "result":"ok",
+    "data":[ 
+        {
+            "id":1,
+            "name":"정렬",
+            "icon":"sort",
+            "title":"정렬",
+            "option":["제목", "기한", "만든 날짜", "완료됨", "나의 하루에 추가됨"],
+            "option_icon":["arrow", "calendar", "plus2", "check", "sun"]
+        }
+    ]
+}

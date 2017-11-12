@@ -1,0 +1,13 @@
+{
+    "result":"ok",
+    "data":[ 
+        {
+            "id":1,
+            "name":"테마 변경",
+            "icon":"theme",
+            "title":"테마 변경",
+            "option_color": ["blue", "red", "purple", "yellowgreen", "skyblue"],
+            "option_picture": ["mountain", "truck", "house", "airplane", "top", "no"]
+        }
+    ]
+}
