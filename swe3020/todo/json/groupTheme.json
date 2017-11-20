@@ -1,13 +1,76 @@
 {
-    "result":"ok",
-    "data":[ 
+    "theme": [
         {
-            "id":1,
-            "name":"테마 변경",
-            "icon":"theme",
-            "title":"테마 변경",
-            "option_color": ["blue", "red", "purple", "yellowgreen", "skyblue"],
-            "option_picture": ["mountain", "truck", "house", "airplane", "top", "no"]
+            "tid":1, 
+            "theme": "mountain",
+            "selected": "True"
+
+        },
+        {
+            "tid":2, 
+            "theme": "campingcar",
+            "selected": "False"
+
+        },
+        {
+            "tid":3, 
+            "theme": "home",
+            "selected": "False"
+
+        },
+        {
+            "tid":4, 
+            "theme": "airplane",
+            "selected": "False"
+
+        },
+        {
+            "tid":5, 
+            "theme": "city",
+            "selected": "False"
+
+        },
+        {
+            "tid":6, 
+            "theme": "none",
+            "selected": "False"
+
+        }
+    ],
+
+    "color": [
+        {
+            "id":1, 
+            "theme": "blue",
+            "selected": "True"
+
+        },
+        {
+            "id":2, 
+            "theme": "orange",
+            "selected": "False"
+
+        },
+        {
+            "tid":3, 
+            "theme": "violet",
+            "selected": "False"
+
+        },
+        {
+            "tid":4, 
+            "theme": "green",
+            "selected": "False"
+
+        },
+        {
+            "tid":5, 
+            "theme": "skyblue",
+            "selected": "False"
+
         }
     ]
+    
+    
+
 }

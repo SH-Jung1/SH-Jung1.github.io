@@ -1,11 +1,13 @@
 {
-    "result":"ok",
-    "data":[ 
+    "data": [
         {
-            "id":1,
-            "name":"title",
-            "icon":"list",
-            "color":"blue"
+            "id":1, 
+            "name":"", 
+            "list": "To-Do",
+            "Due": "Today",
+            "check": "True"
         }
     ]
+    
+
 }

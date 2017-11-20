@@ -1,16 +1,12 @@
 {
-    "result":"ok",
-    "data":[ 
+    "data": [
         {
-            "id":1,
-            "name":"완료된 할 일 숨기기",
-            "icon":"clock"
-        },
-        
-        {
-            "id":2,
-            "name":"완료된 할 일 표시",
-            "icon":"clock"
+            "id":1, 
+            "name":"", 
+            "check": "No",
+            "show": "Yes"
         }
     ]
+    
+
 }

@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <ul style = "list-style: none">
+            <li id = 'a'></li>
+        </ul>
+        <a href="Listadd.html" target="_blank"> 새 목록</a>
+
+        <script>
+            $.get("https://gomgom1.github.io/todo/groupList.json", function(result, status){
+                var arr = result.data;
+                var list = "";
+                for (var i =0; i < arr.length; i++){
+                    list += '<li>' + '<img style = "float: left" width= "5%" height= "5%" src="' + arr[i].icon + '.jpg">'
+                    + arr[i].name 
+                    + '<span style= "display: ralative, right: 10%>' + arr[i].count + "</span></li>";
+                };
+                $("#a").html(list);
+            });
+        </script>
+    </body>
+</html>

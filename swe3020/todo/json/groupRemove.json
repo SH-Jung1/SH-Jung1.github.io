@@ -1,14 +1,15 @@
+
 {
-    "result":"ok",
-    "data":[ 
+    "data": [
+        
         {
-            "id":1,
-            "name":"목록 삭제",
-            "icon":"trashcan",
-            "title":"목록 삭제",
-            "message":"이 목록을 완전히 삭제하시겠습니까?",
-            "cancel":"취소",
-            "yes":"예"
+            "id":3, 
+            "name":"", 
+            "color":"blue", 
+            "icon": "list", 
+            "count":0
         }
     ]
+    
+
 }

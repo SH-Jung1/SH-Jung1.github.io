@@ -1,13 +1,27 @@
 {
-    "result":"ok",
-    "data":[ 
+    "data": [
         {
-            "id":1,
-            "name":"목록 이름 바꾸기",
-            "icon":"pencil",
-            "cancel":"취소",
-            "store":"저장",
-            "title":"목록 편집"
+            "id":1, 
+            "name":"오늘 할 일", 
+            "color": "blue", 
+            "icon": "sun", 
+            "count":0
+        },
+        {
+            "id":2, 
+            "name":"To-Do", 
+            "color": "blue", 
+            "icon": "home", 
+            "count":0
+        },
+        {
+            "id":3, 
+            "name":"", 
+            "color":"blue", 
+            "icon": "list", 
+            "count":0
         }
     ]
+    
+
 }

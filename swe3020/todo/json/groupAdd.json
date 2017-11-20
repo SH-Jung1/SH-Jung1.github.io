@@ -1,14 +1,14 @@
 {
-    "result":"ok",
-    "data":[
+    "data": [
         {
-            "id":1,
-            "name":"새목록",
-            "icon":"plus",
-            "cancel":"취소",
-            "store":"저장",
-            "initial":"제목 없는 목록",
-            "title":"새 목록"
+            "id":1, 
+            "name":"", 
+            "color": "blue", 
+            "icon": "list", 
+            "count":0
         }
+        
     ]
+    
+
 }

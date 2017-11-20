@@ -1,13 +1,28 @@
+
 {
-    "result":"ok",
-    "data":[ 
+    "data": [
         {
-            "id":1,
-            "name":"정렬",
-            "icon":"sort",
-            "title":"정렬",
-            "option":["제목", "기한", "만든 날짜", "완료됨", "나의 하루에 추가됨"],
-            "option_icon":["arrow", "calendar", "plus2", "check", "sun"]
+            "id":1, 
+            "name":"오늘 할 일", 
+            "color": "blue", 
+            "icon": "sun", 
+            "count":0
+        },
+        {
+            "id":2, 
+            "name":"To-Do", 
+            "color": "blue", 
+            "icon": "home", 
+            "count":0
+        },
+        {
+            "id":3, 
+            "name":"", 
+            "color":"blue", 
+            "icon": "list", 
+            "count":0
         }
     ]
+    
+
 }
