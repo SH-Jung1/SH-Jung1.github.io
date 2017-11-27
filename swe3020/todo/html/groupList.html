@@ -1,27 +1,83 @@
 <html>
     <head>
-        <script
-            src="https://code.jquery.com/jquery-3.2.1.min.js"
-            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-            crossorigin="anonymous"></script>
+        <style>
+        #list li:hover{
+            background-color: rgb(199, 242, 253);
+        }
+        </style>
     </head>
     <body>
-        <ul style = "list-style: none">
-            <li id = 'a'></li>
-        </ul>
-        <a href="Listadd.html" target="_blank">새 목록</a>
+        <nav style= "float:left; width: 40%;">
+            <ul id="groupList" style="list-style: none; padding-left:0;"></ul>
+        </nav>
 
+        <div id= "head" style= "width: 60%; height: 20%; float:right;">
+            <h1 id="groupName"></h1>
+        </div>
+
+        <div id= "group" style= "width: 60%; height: 80%; float:right;">
+            <ul id= "TaskList" style="list-style: none;"></ul>    
+        </div>
+
+        <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
         <script>
-            $.get("https://JH-Jung.github.io/todo/groupList.json", function(result, status){
-                var arr = result.data;
-                var list = "";
-                for (var i =0; i < arr.length; i++){
-                    list += '<li>' + '<img style = "float: left" width= "5%" height= "5%" src="' + arr[i].icon + '.jpg">'
-                    + arr[i].name 
-                    + '<span style= "display: ralative, right: 10%>' + arr[i].count + "</span></li>";
-                };
-                $("#a").html(list);
-            });
+        
+        var listdraw = function(result, status){
+            var arr = result.data;
+            var icon = result.icon
+            var list = " ";
+            for(var i = 0; i < arr.length; i++){
+                var iconCode;
+                for(var j = 0; j < icon.length; j++){
+                    if(icon[j][0]==arr[i].icon){
+                        iconCode = icon[j][1];
+                    }
+                }
+                list += "<li class= 'group' id= '" + i + "'><span style='color:" + arr[i].color + ";'>"+ iconCode + "</span>"  + arr[i].name 
+                + "<span style='float:right" + ";'>" + arr[i].count + "</span>" 
+                + "</li>";
+            }
+            list += "<li id='"+"add' style='position:absolute;bottom:10px;'>+ 새 목록</li>"
+            $("#groupList").html(list);
+        }
+
+        $.get("https://JH-Jung.github.io/todo/json/groupList.json", listdraw)
+
+        $("#add").click(function(){
+            var str = prompt("리스트 제목");
+            $.get("https://JH-Jung.github.io/swe3020/todo/json/groupAdd.json",{"name": str, "color":"blue", "icon":"default"}, listdraw)
+            })
+        
+        var taskdraw = function(result, status){
+            var arr = result.data;
+                var task = "";
+                for (var i = 0; i < arr.length; i++){
+                    if (arr[i].list === name){
+                        task += "<li><input type='checkbox'>" + arr.name + "</li>"
+                    }
+                }
+                task += "<button type='button' id= 'taskAddbutton' style='position:absolute;bottom:10px;'>"
+                $("#TaskList").html(task);
+        }
+
+        $(".group").click(function(){
+            var thisId = this.id;
+            var name;
+            $.get("https://JH-Jung.github.io/todo/json/groupList.json", function(result, status){
+                name = result.data[thisId].name;
+                $("#groupName").text(name);
+            })
+            $.get("https://JH-Jung.github.io/todo/json/taskList.json", taskdraw)
+        })
+        
+        $("#taskAddbutton").click(function(){
+            var str = prompt("할 일 추가");
+            $.get("https://JH-Jung.github.io/swe3020/todo/json/taskAdd.json", {"name": str}, taskdraw)
+            })
         </script>
+        
     </body>
 </html>
